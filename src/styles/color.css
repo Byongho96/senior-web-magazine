@@ -1,0 +1,25 @@
+:root {
+  /* =================================
+      1. Brand Colors
+  ================================= */
+  --clr-primary: #FF651E;    
+  --clr-secondary: #FFA801; 
+  --clr-accent: #D6E6FF;     
+  --clr-dark: #FFEFD2;    
+
+
+  /* =================================
+     2. Grayscale Palette
+  ================================= */
+  --clr-white: #FFFFFF;
+  --clr-gray-100: #F7F9FC;
+  --clr-gray-200: #E9ECEF;
+  --clr-gray-300: #DEE2E6;
+  --clr-gray-400: #CED4DA;
+  --clr-gray-500: #ADB5BD;
+  --clr-gray-600: #868E96;
+  --clr-gray-700: #495057;
+  --clr-gray-800: #343A40;
+  --clr-gray-900: #212529;
+  --clr-black: #000000;
+}

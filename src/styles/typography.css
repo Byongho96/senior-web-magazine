@@ -1,0 +1,23 @@
+/* Pretendard - Thin (300) */
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Pretendard-Thin.woff2') format('woff2');
+}
+
+/* Pretendard - Regular (400) */
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Pretendard.woff2') format('woff2');
+}
+
+/* Pretendard - Bold (700) */
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/Pretendard-Bold.woff2') format('woff2');
+}
