@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { CarouselContext } from 'react-responsive-3d-carousel';
 import './CarouselItem.css';
 
@@ -10,10 +10,10 @@ const CarouselItem = (
     imageUrl
   }
 ) => {
-  const { currentIndex }= React.useContext(CarouselContext);
+  const { curIndex }= useContext(CarouselContext);
   
   return (
-    <div className={`carousel-item ${currentIndex === index ? 'active' : ''}`} >
+    <div className={`carousel-item ${curIndex === index ? 'active' : 'inactive'}`} >
       <img src={imageUrl} alt={title}/>
       <h2>{title}</h2>
       <p>{subtitle}</p>

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const ContentCard = ({ category, title, imageUrl, progress}) => {
   return (
-    <NavLink to='/content'>
+    <NavLink to='/content' style={{}}>
       <article className="content-card">
         <span className="content-card__category">{category}</span>
         <img
@@ -35,9 +35,13 @@ const ContentList = (
 ) => {
   return (
     <div className="content-list">
-      {title && <h2 className="content-list__title">{title}</h2>}
-      {subtitle && <p className="content-list__subtitle">{subtitle}</p>}
-      <ul className="content-list__grid">
+       { title &&
+        <div className="content-list__title">
+          <h2>{title}</h2>
+          {subtitle && <p>{subtitle}</p>}
+        </div>
+      }
+      <ul>
         {contents.map((content, index) => (
           <li>
             <ContentCard

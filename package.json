@@ -1,7 +1,7 @@
 {
   "name": "senior_web_magazine",
   "private": true,
-  "homepage": "/senior_web_magazin",
+  "homepage": "/senior_web_magazine",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

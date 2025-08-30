@@ -1,20 +1,24 @@
 .carousel-item {
-  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
+  width: 30%;
 }
 
 .carousel-item img {
-  width: 100%;
-  aspect-ratio: 3/4;
+  width: 300px;
+  aspect-ratio: 4/5;
   border-radius: 8px;
   object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-item h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
+  text-align:center;
+  line-height: 1;
   opacity: 1;
   transition: opacity 0.3s ease;
 }
@@ -24,9 +28,10 @@
 
 .carousel-item p {
   font-size: 1rem;
-  color: #666;
-  margin-top: 0.5rem;
+  text-align:center;
+  line-height: 1;
   opacity: 1;
+  color: var(--clr-gray-600, #666);
   transition: opacity 0.3s ease;
 }
 .carousel-item.inactive p {
@@ -35,4 +40,5 @@
 
 .react-responsive-3d-carousel__item {
   box-shadow: none !important;
+  overflow: visible !important;
 }

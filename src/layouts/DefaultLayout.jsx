@@ -2,17 +2,18 @@
 
 import React from 'react';
 import './DefaultLayout.css'; 
-import Navigation from '../components/molecules/Navigation';
+import Navbar from '../components/molecules/Navbar';
+import Footer from '../components/molecules/Footer';
 import { Outlet } from 'react-router-dom';
 
 const DefaultLayout = () => {
   return (
     <div className="default-layout">
-      <Navigation/>
+      <Navbar/>
       <main className="main-content">
         <Outlet />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
