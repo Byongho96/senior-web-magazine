@@ -53,20 +53,3 @@
   height: 100%;
   transition: color 0.2s ease-in-out;
 }
-
-.nav-link:hover {
-  color: var(--clr-primary, #3A7BFF);
-}
-
-/* NavLink에 의해 자동으로 추가되는 .active 클래스에 대한 스타일 */
-.nav-link.active {
-  font-weight: bold;
-  color: var(--clr-primary, #3A7BFF);
-  border-bottom: 3px solid var(--clr-primary, #3A7BFF);
-}
-
-/* 햄버거 메뉴 버튼 (평소에는 숨김) */
-.menu-toggle {
-  display: none;
-}
-

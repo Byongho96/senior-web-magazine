@@ -3,11 +3,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navigation.css';
+import Button from '../atoms/Button';
 
 const navLinks = [
-  { path: '/', label: '홈으로' },
-  { path: '/products', label: '검색' },
-  { path: '/login', label: '로그인' },
+  { path: '/', label: '홈으로', color: "white" },
+  { path: '/search', label: '검색', color: "white" },
+  { path: '/login', label: '로그인', color: "primary" },
 ];
 
 const Navigation = () => {
@@ -15,7 +16,7 @@ const Navigation = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <NavLink to="/" className="navbar-logo">
-          Logo
+          LOGO
         </NavLink>
         <ul className='nav-menu'>
           {navLinks.map((link) => (
@@ -24,7 +25,7 @@ const Navigation = () => {
                 to={link.path}
                 className="nav-link"
               >
-                {link.label}
+                <Button text={link.label} color={link.color}/>
               </NavLink>
             </li>
           ))}

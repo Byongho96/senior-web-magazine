@@ -1,0 +1,76 @@
+.content-card {
+  position: relative;
+  width: 320px;
+  padding: 1rem 1rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--clr-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.content-card__category {
+  background-color: #f57c00;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 12px;
+  margin: 0 0 12px;
+  border-radius: 8px;
+  display: inline-block;
+  z-index: 1;
+}
+
+.content-card__image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.content-card__progress-bar {
+  width: 90%;
+  height: 8px;
+  background-color: #eee;
+  border-radius: 4px;
+  margin: 8px 0;
+  overflow: hidden;
+}
+
+.content-card__progress-bar > div {
+  width: 20%; 
+  height: 100%;
+  background-color: #f57c00;
+}
+
+.content-card__title {
+  font-size: 18px;
+  font-weight: 600;
+  font-weight: bold;
+  color: #333;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.content-list {
+  width: 100%;
+}
+
+.content-list h2 {
+  display:inline-block;
+  margin: 0 0 0 2rem;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.content-list ul {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow-x: auto;
+}

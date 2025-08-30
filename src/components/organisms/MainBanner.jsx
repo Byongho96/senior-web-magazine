@@ -28,17 +28,19 @@ const bannerList = [
 
 const MainBanner = () => {
   return (
-    <div>
-      <ul className=''>
+    <div className="main_banner">
+      <ul className='main_banner-list'>
         {bannerList.map((banner, index) => (
-          <li key={index} className="main-banner-item">
-            <NavLink to="/products" className="banner-link">
-              <img src={banner.imgUrl} alt={`Banner ${index + 1}`} className="banner-image" />
-              <div className="banner-text">
-                <h2 className="banner-title">{banner.title}</h2>
-                <p className="banner-content">{banner.content}</p>
+          <li key={index} className="main_banner-item">
+            <div className="main_banner-background" style={{backgroundImage: `url(${banner.imgUrl})`}}/>
+            <div className="main_banner-content">
+              <div>
+                <p className="main_banner-tag">{`[${banner.type}]`}</p>
+                <h2 >{banner.title}</h2>
+                <p>{banner.content}</p>
               </div>
-            </NavLink>
+              <img src={banner.imgUrl} alt={`Banner ${index + 1}`} className="banner-image" />
+            </div>
           </li>
         ))}
       </ul>

@@ -1,24 +1,19 @@
-// import { useState } from 'react'
-
-import Button from './components/atoms/Button'
-import Navigation from './components/molecules/Navigation'
 import DefaultLayout from './layouts/DefaultLayout'
 import HomePage from './pages/HomePage'
-import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
+import ContentDetailPage from './pages/ContentDetailPage'
+import VoiceSearchPage from './pages/VoiceSearchPage'
+import { Routes, Route} from 'react-router-dom';
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
-    // <DefaultLayout>
-      <Routes>
-        <Route element={<DefaultLayout />}>
-          <Route path="/" element={<HomePage />} />
-          {/* <Route path="/about" element={<AboutPage />} /> */}
-        </Route>
-
-        {/* </DefaultLayout> */}
-      </Routes>
+    <Routes>
+      <Route element={<DefaultLayout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/content" element={<ContentDetailPage />} />
+      </Route>
+      <Route path="/search" element={<VoiceSearchPage />} />
+    </Routes>
   )
 }
 

@@ -1,0 +1,38 @@
+.carousel-item {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.carousel-item h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.carousel-item.inactive h2 {
+  opacity: 0;
+}
+
+.carousel-item p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.5rem;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.carousel-item.inactive p {
+  opacity: 0;
+}
+
+.react-responsive-3d-carousel__item {
+  box-shadow: none !important;
+}
