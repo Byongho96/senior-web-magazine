@@ -14,7 +14,9 @@ const CarouselItem = (
   
   return (
     <div className={`carousel-item ${curIndex === index ? 'active' : 'inactive'}`} >
-      <img src={imageUrl} alt={title}/>
+      <div>
+        <img src={imageUrl} alt={title}/>
+      </div>
       <h2>{title}</h2>
       <p>{subtitle}</p>
     </div>

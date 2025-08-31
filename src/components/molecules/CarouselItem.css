@@ -6,13 +6,26 @@
   width: 30%;
 }
 
-.carousel-item img {
+.carousel-item div {
   width: 300px;
   aspect-ratio: 4/5;
   border-radius: 8px;
-  object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: var(--clr-white, #ffffff);
 }
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-item.inactive img {
+  opacity: 0.6;
+}
+
 
 .carousel-item h2 {
   font-size: 1.3rem;

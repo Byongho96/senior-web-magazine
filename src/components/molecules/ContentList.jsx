@@ -43,9 +43,8 @@ const ContentList = (
       }
       <ul>
         {contents.map((content, index) => (
-          <li>
+          <li key={index}>
             <ContentCard
-              key={index}
               category={content.category}
               title={content.title}
               imageUrl={content.imageUrl}
