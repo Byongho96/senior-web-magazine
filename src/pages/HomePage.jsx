@@ -1,30 +1,38 @@
 
 import React, {useMemo, useState} from 'react';
-import './HomePage.css';
 import { NavLink } from 'react-router-dom';
 import MainBanner from '../components/organisms/MainBanner';
 import ContentList from '../components/molecules/ContentList';
 import MicSvg from '../assets/svgs/mic.svg?react';
+import SearchSvg from '../assets/svgs/search.svg?react';
 import {Carousel} from 'react-responsive-3d-carousel';
 import CarouselItem from '../components/molecules/CarouselItem';
-import 'react-responsive-3d-carousel/dist/styles.css'
 import { carouselList, content_1, content_2, content_3 } from '../data/homepage';
+import 'react-responsive-3d-carousel/dist/styles.css'
+import './HomePage.css';
 
-const exampleQueries = {
-  '노' : ['노인', '노화', '노후준비', '노년기'],
-  '노인' : ['노인', '노인 복지', '노인정', '노인대학'],
-  '노인 예' : ['노인 예방접종', '노인 예방접종 무료', '노인 독감 예방접종', '노인 폐렴구균 예방접종'],
-  '노인 예방' : ['노인 예방접종', '노인 예우 서비스', '노인 예방접종 무료', '노인 독감 예방접종'],
-  '노인 예방접' : ['노인 예방접종', '노인 예방접종 무료', '노인 독감 예방접종', '노인 폐렴구균 예방접종'],
-  '노인 예방접종' : ['노인 예방접종', '노인 예방접종 무료', '노인 독감 예방접종', '노인 폐렴구균 예방접종'],
-}
+const exampleQueries = [
+  {
+    regex : /^일자리/,
+    suggestions: ['일자리 모집 공고', '일자리 신청 방법', '노인 일자리  찾기', '일자리 연금 병행']
+  },
+  {
+    regex : /^일/,
+    suggestions: ['일자리', '일자리 모집', '일자리 신청', '일자리 유형', '일자리 활동비']
+  },
+]
 
 const HomePage = () => {
   const [ query, setQuery ] = useState('');
 
   const relatedQueries = useMemo(() => {
-    if (query.length === 0) return [];
-    return exampleQueries[query] || [];
+    if (!query) return [];
+    for (const example of exampleQueries) {
+      if (example.regex.test(query)) {
+        return example.suggestions;
+      }
+    }
+    return [];
   }, [query]);
 
   const handleInputChange = (e) => {
@@ -32,7 +40,6 @@ const HomePage = () => {
   } 
 
   const handleClickRelatedQuery = (relatedQuery) => {
-    console.log(relatedQuery);
     setQuery(relatedQuery);
   }
 
@@ -42,11 +49,14 @@ const HomePage = () => {
       <div className='main-page__content'>
         <div className='main-page__search-bar'>
           <input id='search' name='검색어' placeholder='검색어를 입력하세요' value={query} onChange={handleInputChange}/>
-          <div className='main-page__related-queries'>
-            {relatedQueries.map((query, index) => <p key={index} onClick={() => handleClickRelatedQuery(query)}>{query}</p>)}
-          </div>
+          { 
+            !!relatedQueries.length &&
+            <div className='main-page__related-queries'>
+              {relatedQueries.map((query, index) => <p key={index} onClick={() => handleClickRelatedQuery(query)}>{query}</p>)}
+            </div>
+          } 
           <NavLink to='/search' className='search-bar__voice-button'>
-            <MicSvg/>
+            { query ? <SearchSvg/> : <MicSvg/> }
           </NavLink>
         </div>
         <h2 className='main-page__top'>오늘의 Top10 컨텐츠</h2>
@@ -74,7 +84,7 @@ const HomePage = () => {
           }
         />
         <ContentList title={content_1.title} contents={content_1.contents}/>
-        <NavLink className='main-page__ai-recommendation'>
+        <NavLink className='main-page__ai-recommendation' to='/recommendation'>
           나를 위한 AI 추천 컨텐츠
         </NavLink>
         <ContentList title={content_2.title} subtitle={content_2.subtitle} contents={content_2.contents}/>

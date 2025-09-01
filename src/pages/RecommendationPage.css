@@ -1,0 +1,117 @@
+.recommendation-page {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.recommendation-page__result {
+  padding: 5rem 0 5rem;
+}
+
+.recommendation-page__type {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-end;
+}
+
+.recommendation-page__type h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.recommendation-page__type p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  line-height: 1.5;
+}
+
+.recommendation-page__type img {
+  width: 40%;
+  aspect-ratio: 12/16;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+
+.question-card__question {
+  margin: 2rem 0 3rem;
+
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.question-card__question img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.question-card__nums {
+  margin: 0 0 2rem;
+
+  color: var(--clr-white, #ffffff);
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
+}
+
+.question-card__options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.question-card__options button {
+  width: 60%;
+  padding: 0.7rem 1.5rem;
+
+  border: 2px solid var(--clr-gray-700, #454545);
+  border-radius: 3rem;
+  box-sizing: border-box;
+
+  font-size: 1.4rem;
+  font-weight: bold;
+  background-color: var(--clr-white, #ffffff);
+}
+
+.question-card__options button.selected {
+  border: 2px solid var(--clr-primary, #FF651E);
+  background-color: var(--clr-primary, #FF651E);
+
+  color: var(--clr-white, #ffffff);
+}
+
+.question-card__buttons {
+  margin: 3rem 0 5rem;
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.question-card__buttons button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--clr-gray-700, #303030);
+
+  border: none;
+  border-radius: 3rem;
+  background: none;
+  padding: 0.7rem 2.5rem;
+}
+
+.question-card__buttons button:nth-child(1):not(:disabled) {
+  color : var(--clr-white, #ffffff);
+  background-color: var(--clr-primary, #FF651E);
+}

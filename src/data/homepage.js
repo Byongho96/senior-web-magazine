@@ -46,23 +46,23 @@ export const carouselList = [
     imageUrl: carousel_image_1,
   },
   {
-    title: '한번만 생겨도 치명적인 대상포진',
-    subtitle: '가을이면 유행하는 대상포진 예방방법에 대해 알아보기',
+    title: '비급여 100만원 아끼기',
+    subtitle: '지자체/보건소에서 지원하는 비급여 검사, 예방접종 알아보기!',
     imageUrl: carousel_image_2,
   },
   {
-    title: '한번만 생겨도 치명적인 대상포진',
-    subtitle: '가을이면 유행하는 대상포진 예방방법에 대해 알아보기',
+    title: '아무것도 하고 싶지 않을 때',
+    subtitle: '멘탈 회복을 위한 추천 활동 3가지',
     imageUrl: carousel_image_3,
   },
   {
-    title: '한번만 생겨도 치명적인 대상포진',
-    subtitle: '가을이면 유행하는 대상포진 예방방법에 대해 알아보기',
+    title: '쉬고, 걷고, 회복하라',
+    subtitle: '온천·치유의 숲 웰니스 루트 3선',
     imageUrl: carousel_image_4,
   },
   {
-    title: '한번만 생겨도 치명적인 대상포진',
-    subtitle: '가을이면 유행하는 대상포진 예방방법에 대해 알아보기',
+    title: '2천원으로 영화관에서 영화 보기',
+    subtitle: '영화 보고 식사까지 로맨틱, 경제적, 성공적',
     imageUrl: carousel_image_5,
   },
 ]
