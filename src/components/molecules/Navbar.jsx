@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { NavLink } from 'react-router-dom';
+import logo from '../../assets/images/logo.webp';
 import './Navbar.css';
 
 const navLinks = [
@@ -19,7 +20,7 @@ const Navbar = () => {
     <nav className='navbar'>
       <div>
         <NavLink to='/' className='navbar__logo'>
-          LOGO
+          <img src={logo} alt='Logo'/>
         </NavLink>
         <div className='navbar__menu'>
           <button className={`navbar__toggle ${isOpen ? 'open' : ''}`} onClick={handleClick}>

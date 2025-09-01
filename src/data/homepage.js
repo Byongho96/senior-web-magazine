@@ -1,8 +1,24 @@
 
-import sample_image from '../assets/images/sample_image.jpg';
 import banner_image_1 from '../assets/images/main_banner/image_1.webp';
 import banner_image_2 from '../assets/images/main_banner/image_2.webp';
 import banner_image_3 from '../assets/images/main_banner/image_3.webp';;
+import carousel_image_1 from '../assets/images/carousel_slide/image_1.webp';
+import carousel_image_2 from '../assets/images/carousel_slide/image_2.webp';
+import carousel_image_3 from '../assets/images/carousel_slide/image_3.webp';
+import carousel_image_4 from '../assets/images/carousel_slide/image_4.webp';
+import carousel_image_5 from '../assets/images/carousel_slide/image_5.webp';
+import reading_image_1 from '../assets/images/reading_contents/image_1.webp';
+import reading_image_2 from '../assets/images/reading_contents/image_2.webp';
+import reading_image_3 from '../assets/images/reading_contents/image_3.webp';
+import reading_image_4 from '../assets/images/reading_contents/image_4.webp';
+import health_image_1 from '../assets/images/health_contents/image_1.webp';
+import health_image_2 from '../assets/images/health_contents/image_2.webp';
+import health_image_3 from '../assets/images/health_contents/image_3.webp';
+import health_image_4 from '../assets/images/health_contents/image_4.webp';
+import travel_image_1 from '../assets/images/travel_contents/image_1.webp';
+import travel_image_2 from '../assets/images/travel_contents/image_2.webp';
+import travel_image_3 from '../assets/images/travel_contents/image_3.webp';
+import travel_image_4 from '../assets/images/travel_contents/image_4.webp';
 
 export const bannerList = [
   { 
@@ -27,27 +43,27 @@ export const carouselList = [
   {
     title: '한번만 생겨도 치명적인 대상포진',
     subtitle: '가을이면 유행하는 대상포진 예방방법에 대해 알아보기',
-    imageUrl: sample_image,
+    imageUrl: carousel_image_1,
   },
   {
     title: '한번만 생겨도 치명적인 대상포진',
     subtitle: '가을이면 유행하는 대상포진 예방방법에 대해 알아보기',
-    imageUrl: sample_image,
+    imageUrl: carousel_image_2,
   },
   {
     title: '한번만 생겨도 치명적인 대상포진',
     subtitle: '가을이면 유행하는 대상포진 예방방법에 대해 알아보기',
-    imageUrl: sample_image,
+    imageUrl: carousel_image_3,
   },
   {
     title: '한번만 생겨도 치명적인 대상포진',
     subtitle: '가을이면 유행하는 대상포진 예방방법에 대해 알아보기',
-    imageUrl: sample_image,
+    imageUrl: carousel_image_4,
   },
   {
     title: '한번만 생겨도 치명적인 대상포진',
     subtitle: '가을이면 유행하는 대상포진 예방방법에 대해 알아보기',
-    imageUrl: sample_image,
+    imageUrl: carousel_image_5,
   },
 ]
 
@@ -57,32 +73,26 @@ export const content_1 = {
     {
       category: '경제',
       title: '2025년 노인일자리 확 바뀐다',
-      imageUrl: sample_image,
+      imageUrl: reading_image_1,
       progress: 45, 
     },
     {
       category: '건강',
       title: '아무것도 하고 싶지 않을때',
-      imageUrl: sample_image,
+      imageUrl: reading_image_2,
       progress: 45, 
     },
     {
       category: '건강',
       title: '꿈의 암치료 \'중입자 치료기\'' ,
-      imageUrl: sample_image,
+      imageUrl: reading_image_3,
       progress: 55, 
     },
     {
       category: '경제',
       title: '2천원으로 영화관에서 영화 보기',
-      imageUrl: sample_image,
+      imageUrl: reading_image_4,
       progress: 70, 
-    },
-    {
-      category: '경제',
-      title: '노년을 위한 스마트 재테크 전략',
-      imageUrl: sample_image,
-      progress: 20,
     },
   ],
 }
@@ -94,28 +104,23 @@ export const content_2 = {
     {
       category: '건강',
       title: '나를 위한 건강 인테리어',
-      imageUrl: sample_image,
+      imageUrl: health_image_1,
     },
     {
       category: '건강',
-      title: '나를 위한 건강 인테리어',
-      imageUrl: sample_image,
+      title: '한번만 생겨도 치명적인 대상포진',
+      imageUrl: health_image_2,
     },
     {
       category: '건강',
-      title: '나를 위한 건강 인테리어',
-      imageUrl: sample_image,
+      title: '퇴행성 관절염 예방에 좋은 아침 스트레칭',
+      imageUrl: health_image_3,
     },
     {
       category: '건강',
-      title: '나를 위한 건강 인테리어',
-      imageUrl: sample_image,
-    },
-    {
-      category: '건강',
-      title: '나를 위한 건강 인테리어',
-      imageUrl: sample_image,
-    },
+      title: '나를 위한 건강 비급여 100만원 아끼기',
+      imageUrl: health_image_4,
+    }
   ],
 }
 
@@ -125,30 +130,25 @@ export const content_3 = {
   subtitle: '국내외 여행에 관련된 콘텐츠를 볼수 있어요',
   contents: [
     {
-      category: '건강',
-      title: '나를 위한 건강 인테리어',
-      imageUrl: sample_image,
+      category: '여행',
+      title: '65+ 교통·관광 할인 한눈에',
+      imageUrl: travel_image_1,
     },
     {
-      category: '건강',
-      title: '나를 위한 건강 인테리어',
-      imageUrl: sample_image,
+      category: '여행',
+      title: '주말 1박 2일 바다 힐링 코스',
+      imageUrl: travel_image_2,
     },
     {
-      category: '건강',
-      title: '나를 위한 건강 인테리어',
-      imageUrl: sample_image,
+      category: '여행',
+      title: '온천·치유의 숲 웰니스 루트 3선',
+      imageUrl: travel_image_3,
     },
     {
-      category: '건강',
-      title: '나를 위한 건강 인테리어',
-      imageUrl: sample_image,
-    },
-    {
-      category: '건강',
-      title: '나를 위한 건강 인테리어',
-      imageUrl: sample_image,
-    },
+      category: '여행',
+      title: '손주와 떠나는 3대 여행지',
+      imageUrl: travel_image_4,
+    }
   ],
 }
 

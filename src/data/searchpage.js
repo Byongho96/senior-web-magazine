@@ -1,37 +1,35 @@
 
-import sample_image from '../assets/images/sample_image.jpg';
+import result_image_1 from '../assets/images/search_results/image_1.webp';
+import result_image_2 from '../assets/images/search_results/image_2.webp';
+import result_image_3 from '../assets/images/search_results/image_3.webp';
+import result_image_4 from '../assets/images/search_results/image_4.webp';
 
 export const search_content = {
   contents: [
     {
+      category: '건강',
+      title: '비급여 100만원 아끼기',
+      imageUrl: result_image_1,
+    },
+    {
       category: '경제',
-      title: '2025년 노인일자리 확 바뀐다',
-      imageUrl: sample_image,
-      progress: 45, 
+      title: '2025년 노인 일자리 확 바뀐다',
+      imageUrl: result_image_2,
     },
     {
       category: '건강',
-      title: '아무것도 하고 싶지 않을때',
-      imageUrl: sample_image,
-      progress: 45, 
+      title: '한번만 생겨도 치명적인 대상포진' ,
+      imageUrl: result_image_3,
     },
     {
       category: '건강',
-      title: '꿈의 암치료 \'중입자 치료기\'' ,
-      imageUrl: sample_image,
-      progress: 55, 
+      title: '나를 위한 건강 인테리어',
+      imageUrl: result_image_4,
     },
     {
       category: '경제',
-      title: '2천원으로 영화관에서 영화 보기',
-      imageUrl: sample_image,
-      progress: 70, 
-    },
-    {
-      category: '경제',
-      title: '노년을 위한 스마트 재테크 전략',
-      imageUrl: sample_image,
-      progress: 20,
+      title: '2025년 노인 일자리 확 바뀐다',
+      imageUrl: result_image_2,
     },
   ],
 }

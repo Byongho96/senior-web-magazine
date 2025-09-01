@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const ContentCard = ({ category, title, imageUrl, progress}) => {
   return (
-    <NavLink to='/content' style={{}}>
+    <NavLink to='/content' style={{textDecoration: 'none'}}>
       <article className="content-card">
         <span className="content-card__category">{category}</span>
         <img

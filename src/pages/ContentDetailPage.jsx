@@ -1,9 +1,16 @@
 import React, {useState, useMemo} from "react";
 import "./ContentDetailPage.css";
 import { contentDetail, relevantContent } from "../data/contentpage";
-import ContentList from "../components/molecules/ContentList";
+import ContentList from "../components/molecules/ContentList";;
+import LikeOutlineSvg from '../assets/svgs/heart_outline.svg?react';
+import StarOutlineSvg from '../assets/svgs/star_outline.svg?react';
+import HeadphoneSvg from '../assets/svgs/headphone.svg?react';
+import ShareSvg from '../assets/svgs/share.svg?react';
 
-const ContentDetail = ({ imgUrl, title, subtitle, summary, date, content }) => {
+const ContentDetail = ({ imgUrl, title, subtitle, summary, date, content, text }) => {
+  const [ isLiked, setIsLiked ] = useState(false);
+  const [ isBookmarked, setIsBookmarked ] = useState(false);
+
   const [ fontSize, setFontSize ] = useState(1);
   const [ voices, setVoices ] = useState([]);
   const [ isSpeaking, setIsSpeaking] = useState(false);
@@ -30,7 +37,7 @@ const ContentDetail = ({ imgUrl, title, subtitle, summary, date, content }) => {
       return
     } 
 
-    const utterance = new SpeechSynthesisUtterance(content);
+    const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'ko-KR';
 
     const koreanVoice = voices.find(voice => voice.lang === 'ko-KR');
@@ -48,6 +55,20 @@ const ContentDetail = ({ imgUrl, title, subtitle, summary, date, content }) => {
     window.speechSynthesis.speak(utterance);
     setIsSpeaking(true);
   }
+
+  const handleClickShareButton = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: title,
+        text: subtitle,
+        url: window.location.href,
+      })
+      .then(() => console.log('콘텐츠가 공유되었습니다.'))
+      .catch((error) => console.error('공유에 실패했습니다:', error));
+    } else {
+      console.warn('Web Share API를 지원하지 않는 브라우저입니다.');
+    } 
+  }
   
   return (
     <div className="content-detail">
@@ -57,31 +78,32 @@ const ContentDetail = ({ imgUrl, title, subtitle, summary, date, content }) => {
         <h1>{title}</h1>
         <h2>{subtitle}</h2>
         <div className="content-detail__buttons">
-          <button className="content-category">건강</button>
-          <button className="content-category">경제</button>
-          <button className="content-category">여행</button>
+          <button className={isLiked ? 'fill' : ''} onClick={()=>setIsLiked(!isLiked)}><LikeOutlineSvg/></button>
+          <button className={isBookmarked ? 'fill' : ''} onClick={()=>setIsBookmarked(!isBookmarked)}><StarOutlineSvg/></button>
+          <button onClick={handleClickShareButton}><ShareSvg/></button>
         </div>
 
-        <p className="content-detail__summary">{summary}</p>
+        <div className="content-detail__summary">{summary}</div>
 
         <div className="content-detail__footer">
           <div className="content-detail__assist">
             <button onClick={handleClickSpeak} disabled={!isSupported}>
               {
                 !isSupported ? '브라우저 지원 안됨' :
-                isSpeaking ? '듣기 중단' : '콘텐츠 듣기'
-              }</button>
-            <div className="content-detail__font-buttons">
-              <button className="small-font" onClick={() => setFontSize(1)}>가</button>
-              <button className="big-font" onClick={() => setFontSize(1.3)}>가</button>
-            </div>
+                isSpeaking ? '듣기 중단' : <><HeadphoneSvg/><p>컨텐츠 듣기</p></>
+              }
+            </button>
           </div>
           <span className="content-detail__date">{date}</span>
         </div>
       </header>
 
       <section className="content-detail__body" style={{fontSize: `${fontSize}rem`}}>
-        <p>{content}</p>
+        <div className="content-detail__font-buttons">
+          <button className="small-font" onClick={() => setFontSize(fontSize - 0.1)}>가</button>
+          <button className="big-font" onClick={() => setFontSize(fontSize + 0.1)}>가</button>
+        </div>
+        <div>{content}</div>
       </section>
     </div>
   );
@@ -89,7 +111,7 @@ const ContentDetail = ({ imgUrl, title, subtitle, summary, date, content }) => {
 
 const ContentDetailPage = () => {
   return (
-    <div>
+    <div className="content-detail-page">
       <ContentDetail {...contentDetail} />
       <ContentList {...relevantContent} />
     </div>

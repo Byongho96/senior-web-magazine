@@ -20,7 +20,7 @@
   align-items: center;
 
   width: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
 
   padding: 0 2.3rem;
 }
@@ -30,6 +30,10 @@
   font-size: 2rem;
   font-weight: bold;
   text-decoration: none;
+}
+
+.navbar__logo img {
+  height: 2.5rem;
 }
 
 .navbar__toggle {
