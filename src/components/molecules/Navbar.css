@@ -42,7 +42,7 @@
 
 .navbar__links {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   list-style: none;
   font-size: 1.2rem;
 }
@@ -50,7 +50,14 @@
 .navbar__links a {
   text-decoration: none;
   color: var(--clr-black, #000000);
-  font-weight: 500;
+  padding: 0.5rem 1.2rem;
+  border-radius: 3rem;
+  font-weight: bold;
+}
+
+.navbar__links li:nth-child(3) a {
+  color: var(--clr-white, #ffffff);
+  background-color: var(--clr-primary, #FF651E);
 }
 
 @media screen and (max-width: 600px) {

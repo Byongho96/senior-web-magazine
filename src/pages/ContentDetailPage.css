@@ -121,16 +121,20 @@
 
   line-height: 1.5;
   white-space: pre-wrap;
+
+  transform: translate(0); 
 }
 
 .content-detail__font-buttons {
-  position: sticky;
+  /* position: absolute;
   top: 0;
-  right: 0;
+  right: 0; */
   /* translate: (50%, -50%); */
 
   display: flex;
+  justify-content: flex-end;
   gap: 0.1rem;
+  margin: 0 0 1rem 0;
 }
 
 .content-detail__font-buttons button {

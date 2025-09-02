@@ -3,6 +3,7 @@ import HomePage from './pages/HomePage'
 import ContentDetailPage from './pages/ContentDetailPage'
 import VoiceSearchPage from './pages/VoiceSearchPage'
 import RecommendationPage from './pages/RecommendationPage'
+import LoginPage from './pages/LoginPage'
 import { Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/content" element={<ContentDetailPage />} />
         <Route path="/recommendation" element={<RecommendationPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Route>
       <Route path="/search" element={<VoiceSearchPage />} />
     </Routes>

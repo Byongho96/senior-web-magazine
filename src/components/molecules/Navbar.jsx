@@ -1,20 +1,32 @@
-import React, {useState} from 'react';
+import React, {useContext, useMemo, useState} from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo.webp';
+import { LoginContext } from '../../context/LoginContext';
 import './Navbar.css';
-
-const navLinks = [
-  { path: '/', label: '홈으로', color: 'white' },
-  { path: '/search', label: '검색', color: 'white' },
-  { path: '/login', label: '로그인', color: 'primary' },
-];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { isLogin } = useContext(LoginContext);
+
 
   const handleClick = () => {
     setIsOpen(!isOpen);
   }
+
+  const navLinks = useMemo(() => {
+    if (isLogin) {
+      return [    
+        { path: '/', label: '홈으로', color: 'white' },
+        { path: '/search', label: '검색', color: 'white' },
+        { path: '/', label: '김성호님', color: 'primary' },
+      ];
+    } 
+    return [
+      { path: '/', label: '홈으로', color: 'white' },
+      { path: '/search', label: '검색', color: 'white' },
+      { path: '/login', label: '로그인', color: 'primary' },
+    ];
+  }, [isLogin]);
 
   return (
     <nav className='navbar'>
