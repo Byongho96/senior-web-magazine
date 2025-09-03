@@ -46,8 +46,8 @@ export const carouselList = [
     imageUrl: carousel_image_1,
   },
   {
-    title: '비급여 100만원 아끼기',
-    subtitle: '지자체/보건소에서 지원하는 비급여 검사, 예방접종 알아보기!',
+    title: '65세 이상 보건소 무료·저비용 혜택 체크리스트',
+    subtitle: '건강 지킴이 보건소의 무료/저렴한 혜택에 대해 알아보기!',
     imageUrl: carousel_image_2,
   },
   {
@@ -118,7 +118,7 @@ export const content_2 = {
     },
     {
       category: '건강',
-      title: '나를 위한 건강 비급여 100만원 아끼기',
+      title: '65세 이상 보건소 무료·저비용 혜택 체크리스트',
       imageUrl: health_image_4,
     }
   ],
