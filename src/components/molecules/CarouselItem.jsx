@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import { CarouselContext } from 'react-responsive-3d-carousel';
 import './CarouselItem.css';
+import { NavLink } from 'react-router-dom';
 
 const CarouselItem = (
   {
@@ -13,13 +14,17 @@ const CarouselItem = (
   const { curIndex }= useContext(CarouselContext);
   
   return (
+    
     <div className={`carousel-item ${curIndex === index ? 'active' : 'inactive'}`} >
-      <div>
-        <img src={imageUrl} alt={title}/>
-      </div>
-      <h2>{title}</h2>
-      <p>{subtitle}</p>
+      <NavLink to='/content' className='carousel-link'>
+        <div>
+          <img src={imageUrl} alt={title}/>
+        </div>
+        <h2>{title}</h2>
+        <p>{subtitle}</p>
+      </NavLink>
     </div>
+    
   );
 }
 
