@@ -57,3 +57,19 @@
   box-shadow: none !important;
   overflow: visible !important;
 }
+
+/* Ensure wrapping NavLink doesn't break layout or colors */
+.carousel-item > a,
+.carousel-item > .carousel-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.carousel-item > a:visited,
+.carousel-item > .carousel-link:visited {
+  color: inherit;
+}

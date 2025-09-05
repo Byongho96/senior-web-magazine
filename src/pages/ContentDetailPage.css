@@ -1,6 +1,6 @@
 .content-detail-page {
   width: 100%;
-  max-width: 800px;
+  min-width: 800px;
   margin: 0 auto;
 }
 
@@ -123,6 +123,57 @@
   white-space: pre-wrap;
 
   transform: translate(0); 
+
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--clr-gray-900, #212529);
+  white-space: normal;
+}
+
+.content-detail__body h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+  color: var(--clr-primary, #FF651E);
+}
+
+.content-detail__body h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.content-detail__body p {
+  margin: 1rem 0;
+  color: var(--clr-gray-800, #343A40);
+  line-height: 1.7;
+}
+
+.content-detail__body ul {
+  list-style: disc;
+  margin: 0.5rem 0 1.5rem 1.5rem;
+  padding: 0;
+}
+
+.content-detail__body li {
+  margin: 0.4rem 0;
+}
+
+.content-detail__body a {
+  color: var(--clr-primary, #FF651E);
+  text-decoration: underline;
+  font-weight: 500;
+}
+.content-detail__body a:hover {
+  opacity: 0.85;
+}
+
+.content-detail__body blockquote {
+  border-left: 4px solid var(--clr-primary, #FF651E);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: var(--clr-gray-700, #495057);
+  font-style: italic;
 }
 
 .content-detail__font-buttons {
@@ -151,4 +202,58 @@
   color: var(--clr-white, #FFFFFF);
   font-weight: bold;
   cursor: pointer;
+}
+
+.content-detail__body {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--clr-gray-900, #212529);
+  white-space: normal;
+}
+
+.content-detail__body h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+  color: var(--clr-primary, #FF651E);
+}
+
+.content-detail__body h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.content-detail__body p {
+  margin: 1rem 0;
+  color: var(--clr-gray-800, #343A40);
+  line-height: 1.7;
+}
+
+.content-detail__body ul {
+  list-style: disc;
+  margin: 0.5rem 0 1.5rem 1.5rem;
+  padding: 0;
+}
+
+.content-detail__body li {
+  margin: 0.4rem 0;
+}
+
+.content-detail__body a {
+  color: var(--clr-primary, #FF651E);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.content-detail__body a:hover {
+  opacity: 0.85;
+}
+
+.content-detail__body blockquote {
+  border-left: 4px solid var(--clr-primary, #FF651E);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: var(--clr-gray-700, #495057);
+  font-style: italic;
 }
