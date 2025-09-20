@@ -45,6 +45,7 @@ const Navbar = () => {
               <li key={link.path}>
                 <NavLink
                   to={link.path}
+                  onClick={handleClick}
                 >
                   {link.label}
                 </NavLink>

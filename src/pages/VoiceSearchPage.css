@@ -140,3 +140,32 @@
   user-select: auto;
   pointer-events: auto;
 }
+
+@media screen and (max-width: 768px) {
+  .voice-search__go-back {
+    top: 1.5rem;
+    left: 1rem;
+
+    font-size: 4.5vw;
+  }
+
+  .voice-search__content--guide {
+    white-space: nowrap;
+    font-size: 5vw;
+
+    gap: 1.5rem;
+  }
+
+  .voice-search__content--guide.upward {
+    transform: translate(-50%, -37vh);
+  }
+
+  .voice-search__content--results.visible { 
+    transform: translate(-50%, -48%);
+  }
+
+  .voice-search__content--results p {
+    font-size: 5vw;
+  }
+
+}

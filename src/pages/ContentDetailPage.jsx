@@ -113,7 +113,9 @@ const ContentDetailPage = () => {
   return (
     <div className="content-detail-page">
       <ContentDetail {...contentDetail} />
-      <ContentList {...relevantContent} />
+      <div className="content-detail-page__relevant">
+        <ContentList {...relevantContent} />
+      </div>
     </div>
   )
 }

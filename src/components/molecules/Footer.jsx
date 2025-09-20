@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <div className="footer-title">Haha Hoho <br/> Senior Web Magazine</div>
+        <div className="footer-title">The Lounge<br/>Senior Web Magazine</div>
       
         <div className="footer-links">
           <a href="#">About</a>

@@ -2,15 +2,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   padding: 0 4rem;
 }
 
 .main-page__top {
   align-self: flex-start;
   text-align: left;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  margin: 2rem 0 0;
+  margin: 3rem 0 0;
 }
 
 .main-page__search-bar {
@@ -91,4 +92,28 @@
   font-size: 1.7rem;
   font-weight: bold;
   text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .main-page__content {
+    padding: 0 1rem;
+  }
+
+  .main-page__search-bar {
+    padding: 0.6rem 1rem;
+  }
+
+  .main-page__search-bar input {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+
+  .main-page__search-bar a {
+    height: 3rem;
+  }
+
+  .main-page__ai-recommendation {
+    padding: 1.5rem 1.5rem;
+    font-size: 1.5rem;
+  }
 }
