@@ -7,7 +7,7 @@
 }
 
 .carousel-item div {
-  width: 300px;
+  width: 100%;
   aspect-ratio: 4/5;
   border-radius: 10px;
   border: 1px solid var(--clr-primary, #2D4F3E);
@@ -44,7 +44,7 @@
 .carousel-item p {
   font-size: 1rem;
   text-align:center;
-  line-height: 1;
+  line-height: 1.2;
   opacity: 1;
   color: var(--clr-gray-600, #666);
   transition: opacity 0.3s ease;
@@ -72,4 +72,14 @@
 .carousel-item > a:visited,
 .carousel-item > .carousel-link:visited {
   color: inherit;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-item h2 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-item p {
+    font-size: 1.2rem;
+  }
 }

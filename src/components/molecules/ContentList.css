@@ -79,7 +79,7 @@
 
 .content-list ul {
   display: flex;
-  gap: 20px;
+  gap: 1.4rem;
 
   width: 100%;
 
@@ -91,4 +91,31 @@
 
 .content-list ul::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .content-list__title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    gap: 1rem;
+    margin: 3rem 0 1.5rem 0;
+  }
+
+    .content-list__title h2 {
+    font-size: 1.6rem;
+  }
+
+  .content-list ul {
+    gap: 1rem;
+  }
+
+  .content-card {
+    width: 50vw;
+  }
+
 }

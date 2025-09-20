@@ -10,6 +10,7 @@ import CarouselItem from '../components/molecules/CarouselItem';
 import { carouselList, content_1, content_2, content_3 } from '../data/homepage';
 import 'react-responsive-3d-carousel/dist/styles.css'
 import './HomePage.css';
+import useMobile from '../hooks/useMobile';
 
 const exampleQueries = [
   {
@@ -24,6 +25,7 @@ const exampleQueries = [
 
 const HomePage = () => {
   const [ query, setQuery ] = useState('');
+  const isMobile = useMobile()
 
   const relatedQueries = useMemo(() => {
     if (!query) return [];
@@ -64,11 +66,11 @@ const HomePage = () => {
           showIndicators={false}
           defaultOption={{ 
             angleFactor: 0,
-            depthFactor: 1.8,
-            widthFactor: 1.2,
+            depthFactor: isMobile ? 1 : 1.8,
+            widthFactor: isMobile ? 2 : 1.2,
           }}
-          containerHeight='600px'
-          width= '400px'
+          containerHeight={isMobile ? '70vh' :'600px'}
+          width= {isMobile ? '60vw' :'400px'}
           height= 'auto'
           autoPlay= {false}
           items={
