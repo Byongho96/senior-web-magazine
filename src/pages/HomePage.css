@@ -24,7 +24,7 @@
   width: 100%;
   padding: 0.7rem 1.5rem;
   
-  border: 2px solid var(--clr-primary, #FF651E);
+  border: 2px solid var(--clr-primary, #2D4F3E);
   border-radius: 1rem;
   box-sizing: border-box;
 }
@@ -69,7 +69,7 @@
 
   height: 3.5rem;
   aspect-ratio: 1/1;
-  background-color: var(--clr-primary, #FF651E);
+  background-color: var(--clr-primary, #2D4F3E);
   border-radius: 50%;
 }
 
@@ -83,7 +83,7 @@
   padding: 1.8rem 1.5rem;
   margin: 2rem 0 0;
 
-  background-color: var(--clr-primary, #FF651E);
+  background-color: var(--clr-primary, #2D4F3E);
   border-radius: 1rem;
     box-sizing: border-box;
 

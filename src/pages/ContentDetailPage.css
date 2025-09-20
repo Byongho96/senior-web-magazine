@@ -28,7 +28,7 @@
 .content-detail__header h1 {
   font-size: 2rem;
   font-weight: bold;
-  color: var(--clr-primary, #FF651E);
+  color: var(--clr-primary, #2D4F3E);
   margin-bottom: 1rem;
 }
 
@@ -91,7 +91,7 @@
 
   border: none;
   border-radius: 20px;
-  background-color: var(--clr-primary, #FF651E);
+  background-color: var(--clr-primary, #2D4F3E);
   
   color: var(--clr-white, #FFFFFF);
   font-size: 1.2rem;
@@ -134,7 +134,7 @@
   font-size: 1.6rem;
   font-weight: 700;
   margin: 2rem 0 1rem;
-  color: var(--clr-primary, #FF651E);
+  color: var(--clr-primary, #2D4F3E);
 }
 
 .content-detail__body h3 {
@@ -160,7 +160,7 @@
 }
 
 .content-detail__body a {
-  color: var(--clr-primary, #FF651E);
+  color: var(--clr-primary, #2D4F3E);
   text-decoration: underline;
   font-weight: 500;
 }
@@ -169,7 +169,7 @@
 }
 
 .content-detail__body blockquote {
-  border-left: 4px solid var(--clr-primary, #FF651E);
+  border-left: 4px solid var(--clr-primary, #2D4F3E);
   padding-left: 1rem;
   margin: 1.5rem 0;
   color: var(--clr-gray-700, #495057);
@@ -197,7 +197,7 @@
   aspect-ratio: 1/1;
 
   border: none;
-  background-color: var(--clr-primary, #FF651E);
+  background-color: var(--clr-primary, #2D4F3E);
   
   color: var(--clr-white, #FFFFFF);
   font-weight: bold;
@@ -215,7 +215,7 @@
   font-size: 1.6rem;
   font-weight: 700;
   margin: 2rem 0 1rem;
-  color: var(--clr-primary, #FF651E);
+  color: var(--clr-primary, #2D4F3E);
 }
 
 .content-detail__body h3 {
@@ -241,7 +241,7 @@
 }
 
 .content-detail__body a {
-  color: var(--clr-primary, #FF651E);
+  color: var(--clr-primary, #2D4F3E);
   text-decoration: underline;
   font-weight: 500;
 }
@@ -251,7 +251,7 @@
 }
 
 .content-detail__body blockquote {
-  border-left: 4px solid var(--clr-primary, #FF651E);
+  border-left: 4px solid var(--clr-primary, #2D4F3E);
   padding-left: 1rem;
   margin: 1.5rem 0;
   color: var(--clr-gray-700, #495057);

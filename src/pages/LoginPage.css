@@ -10,7 +10,7 @@
   background-color: #ffffff;
   padding: 4rem;
   border-radius: 8px;
-  border: 1px solid var(--clir-primary, #FF651E);
+  border: 1px solid var(--clr-primary, #2D4F3E);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
@@ -53,7 +53,7 @@
 .login-page__container >  button {
   width: 100%;
   padding: 0.75rem;
-  background-color: var(--clr-primary, #FF651E);
+  background-color: var(--clr-primary, #2D4F3E);
   color: var(--clr-white, #ffffff);
   border: none;
   border-radius: 3rem;

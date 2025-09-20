@@ -86,8 +86,8 @@
 }
 
 .question-card__options button.selected {
-  border: 2px solid var(--clr-primary, #FF651E);
-  background-color: var(--clr-primary, #FF651E);
+  border: 2px solid var(--clr-primary, #2D4F3E);
+  background-color: var(--clr-primary, #2D4F3E);
 
   color: var(--clr-white, #ffffff);
 }
@@ -113,5 +113,5 @@
 
 .question-card__buttons button:nth-child(1):not(:disabled) {
   color : var(--clr-white, #ffffff);
-  background-color: var(--clr-primary, #FF651E);
+  background-color: var(--clr-primary, #2D4F3E);
 }
