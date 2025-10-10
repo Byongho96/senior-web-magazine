@@ -73,7 +73,6 @@ const ContentDetail = ({ imgUrl, title, subtitle, summary, date, content, text }
   return (
     <div className="content-detail">
       <img src={imgUrl} alt={title} className="content-detail__image" />
-
       <header className="content-detail__header">
         <h1>{title}</h1>
         <h2>{subtitle}</h2>

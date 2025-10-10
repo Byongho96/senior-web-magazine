@@ -61,6 +61,11 @@
 }
 
 @media screen and (max-width: 600px) {
+  .navbar__logo img {
+    height: 2rem;
+  }
+
+
   .navbar__toggle {
     position: relative;
     display: block;
@@ -110,7 +115,7 @@
     top: 5.5rem;
     left: 100%;
 
-    display: grid;
+    display: none;
     grid-template-rows: repeat(3, 0fr);
     justify-items: flex-end;
     transition: all 0.2s ease-in-out;
@@ -132,6 +137,7 @@
   }
 
   .navbar__links.open {
+    display: grid;
     transform: translateX(-103%);
     grid-template-rows: repeat(3, 1fr);
   }

@@ -1,5 +1,7 @@
 .content-detail-page {
+  position: relative;
   width: 100%;
+  height: auto;
   min-width: 800px;
   margin: 0 auto;
 }
@@ -13,7 +15,6 @@
 .content-detail__image {  
   width: 100%;
   height: 400px;
-  
   object-fit: cover;
   object-position: 50% 20%;;
 }
@@ -177,10 +178,8 @@
 }
 
 .content-detail__font-buttons {
-  /* position: absolute;
-  top: 0;
-  right: 0; */
-  /* translate: (50%, -50%); */
+  position: sticky;
+  top: 7rem;
 
   display: flex;
   justify-content: flex-end;
@@ -292,11 +291,18 @@
     font-size: 1.5rem;
   }
 
+  
+  .content-detail__font-buttons {
+    top: 7rem;
+  }
+
+
   .content-detail__body {
     padding: 0 1rem;
     font-size: 1.5rem;
     width: 100%;
   }
+
   .content-detail__body h2 {
     font-size: 1.8rem;
   }
